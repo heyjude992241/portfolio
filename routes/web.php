@@ -18,3 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/card', 'PortfolioController@card');
+
+Route::get('/business-card', 'PortfolioController@businessCard');
+
+Route::get('/navbar-1', 'PortfolioController@navbar1');
+
+Route::get('/navbar-2', 'PortfolioController@navbar2');
+
+Route::get('/navbar-3', 'PortfolioController@navbar3');

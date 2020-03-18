@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
 .card {
     display: grid;
     grid-template-columns: 300px;
     grid-template-rows: 210px 210px 80px;
     grid-template-areas: "image" "text" "stats";
 
-    font-family: roboto;
+    font-family: "Roboto";
     border-radius: 18px;
     background: white;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
