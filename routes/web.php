@@ -17,12 +17,30 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/card', 'PortfolioController@card');
+Route::prefix('card')->group(function(){
+    Route::get('lily', 'PortfolioController@card');
+    Route::get('business', 'PortfolioController@businessCard');
+});
 
-Route::get('/business-card', 'PortfolioController@businessCard');
+Route::get('navbar/{id}', function($id){
+    switch($id){
+        case 1: return view('portfolio.navbar.nav1');
+        break;
 
-Route::get('/navbar-1', 'PortfolioController@navbar1');
+        case 2: return view('portfolio.navbar.nav2');
+        break;
 
-Route::get('/navbar-2', 'PortfolioController@navbar2');
+        case 3: return view('portfolio.navbar.nav3');
+        break;
+    }
+});
 
-Route::get('/navbar-3', 'PortfolioController@navbar3');
+Route::prefix('anim')->group(function(){
+    Route::get('clock', function(){
+        return view('anim.clock');
+    });
+});
+
+Route::get('/home', function(){
+    return view('main.layout');
+});
