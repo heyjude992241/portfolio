@@ -41,6 +41,12 @@ Route::prefix('anim')->group(function(){
     });
 });
 
+Route::prefix('utils')->group(function(){
+    Route::get('calculator', function(){
+        return view('utils.calculator');
+    });
+});
+
 Route::get('/home', function(){
     return view('main.layout');
 });
